@@ -1,6 +1,6 @@
 This is a Rails / D3 Demo.
 
-http://i.imgur.com/nB7Ykfb.pngs
+![Image](http://i.imgur.com/nB7Ykfb.png)
 
 Pull it down or git clone it, then bundle install, then hit
 localhost:3000 - Add a new "Favorite" with comma separated numbers,
