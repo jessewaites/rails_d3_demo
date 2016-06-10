@@ -1,0 +1,29 @@
+This is a Rails / D3 Demo.
+
+![Image](http://i.imgur.com/nB7Ykfb.png)
+
+Pull it down or git clone it, then bundle install, then hit
+localhost:3000 - Add a new "Favorite" with comma separated numbers,
+such as:
+
+Numbers: 7,4,8,3,9,22
+
+Color: Blue
+
+Movie: Pulp Fiction
+
+You will then be redirected to the show page and can see your fancy D3 chart.
+
+The magic happens in this method in the controller:
+
+def make_jsonish(array)
+  elements = array.each_with_index.map { |num, i|
+    { key: i, value: num}
+  }
+end
+
+And by using this in the javascript:
+
+var dataset =
+<%= raw JSON.pretty_generate @jsonish %>
+;
